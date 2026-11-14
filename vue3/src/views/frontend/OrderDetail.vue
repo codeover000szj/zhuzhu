@@ -94,7 +94,7 @@
         <figure class="wechat-qr-image-wrap">
           <img
             class="wechat-qr-image"
-            src="/payment/wechat-personal-qr.jpg"
+            :src="paymentQrPath"
             alt="个人微信收款二维码"
           >
           <figcaption>请在微信收款页面核对收款方与金额</figcaption>
@@ -152,7 +152,7 @@
       <p class="wechat-qr-modal-title">请使用微信扫描下方收款码</p>
       <img
         class="wechat-qr-modal-image"
-        src="/payment/wechat-personal-qr.jpg"
+        :src="paymentQrPath"
         alt="微信收款二维码"
       >
       <p class="wechat-qr-modal-amount">应付金额：<strong>¥{{ orderDetail?.payAmount }}</strong></p>
@@ -175,6 +175,7 @@ import { withDisplayYear } from '@/utils/dateUtils';
 
 const router = useRouter();
 const route = useRoute();
+const paymentQrPath = `${import.meta.env.BASE_URL}payment/wechat-personal-qr.jpg`;
 
 // 数据
 const orderDetail = ref(null);
