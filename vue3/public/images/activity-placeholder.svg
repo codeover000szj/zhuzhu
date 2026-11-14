@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">活动封面待补充</title>
+  <desc id="desc">非遗活动主题色封面占位图</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5eee0"/>
+      <stop offset="1" stop-color="#e8ddc8"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#c5a982" stroke-opacity=".18" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="700" fill="url(#paper)"/>
+  <rect width="1200" height="700" fill="url(#grid)"/>
+  <rect x="60" y="60" width="1080" height="580" rx="18" fill="none" stroke="#9c7051" stroke-opacity=".5" stroke-width="3"/>
+  <circle cx="600" cy="292" r="90" fill="#9c7051" fill-opacity=".1" stroke="#9c7051" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M546 315l44-52 34 38 24-27 43 53H546z" fill="none" stroke="#8a634a" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="567" cy="278" r="8" fill="#8a634a"/>
+  <text x="600" y="450" text-anchor="middle" fill="#604b3d" font-family="sans-serif" font-size="42" letter-spacing="8">非遗活动</text>
+  <text x="600" y="505" text-anchor="middle" fill="#8a7868" font-family="sans-serif" font-size="24" letter-spacing="3">活动图片待补充</text>
+</svg>

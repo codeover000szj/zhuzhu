@@ -1,0 +1,18 @@
+import request from '@/utils/request'
+
+export const getMyCourses = () => request.get('/learning/mine')
+export const getCourseStatus = (courseId) => request.get(`/learning/courses/${courseId}/status`)
+export const enrollCourse = (courseId) => request.post(`/learning/courses/${courseId}/enroll`)
+export const completeChapter = (courseId, chapterId) => request.post(`/learning/courses/${courseId}/chapters/${chapterId}/complete`)
+export const getCourseResources = (courseId) => request.get(`/learning/courses/${courseId}/resources`)
+export const createCourseResource = (courseId, payload) => request.post(`/learning/courses/${courseId}/resources`, payload)
+export const deleteCourseResource = (resourceId) => request.delete(`/learning/resources/${resourceId}`)
+export const getCourseTasks = (courseId) => request.get(`/learning/courses/${courseId}/tasks`)
+export const createCourseTask = (courseId, payload) => request.post(`/learning/courses/${courseId}/tasks`, payload)
+export const submitCourseTask = (courseId, taskId, payload) => request.post(`/learning/courses/${courseId}/tasks/${taskId}/submit`, payload)
+export const getTeacherCourses = () => request.get('/learning/teacher/courses')
+export const getTaskSubmissions = (taskId) => request.get(`/learning/tasks/${taskId}/submissions`)
+export const reviewSubmission = (submissionId, payload) => request.put(`/learning/submissions/${submissionId}/review`, payload)
+export const getQuestions = (courseId) => request.get('/learning/questions', courseId ? { courseId } : null)
+export const createQuestion = (payload) => request.post('/learning/questions', payload)
+export const replyToQuestion = (questionId, payload) => request.post(`/learning/questions/${questionId}/replies`, payload)

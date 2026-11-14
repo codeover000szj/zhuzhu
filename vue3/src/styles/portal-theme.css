@@ -1,0 +1,70 @@
+.frontend-layout { --portal-paper:#f7f4ec; --portal-ink:#32332c; --portal-red:#a4362a; --portal-gold:#b29872; --portal-line:#d9cfbd; --portal-muted:#8a8477; }
+.frontend-layout .portal-interior { background:#f7f4ec url('/images/heritage-detail.jpg') center top / 1600px auto fixed; background-blend-mode:multiply; min-height:60vh; color:var(--portal-ink); }
+.frontend-layout .portal-interior { position:relative; isolation:isolate; }
+.frontend-layout .portal-interior::after { content:''; position:absolute; z-index:1; inset:0; pointer-events:none; background:url('/images/portal-watermark.svg') center 90px / 520px 360px repeat; opacity:.46; mix-blend-mode:multiply; }
+.frontend-layout .portal-interior :is(h1,h2,h3,h4) { font-family:'Songti SC','STSong','SimSun',serif; }
+.frontend-layout .portal-interior .ant-btn { border-radius:1px; box-shadow:none; font-size:12px; }
+.frontend-layout .portal-interior .ant-btn-primary:not(:disabled) { background:#a4362a; border-color:#a4362a; }
+.frontend-layout .portal-interior .ant-btn-primary:not(:disabled):hover { background:#883026; border-color:#883026; transform:none; box-shadow:0 3px 12px #632d251c; }
+.frontend-layout .portal-interior :is(.ant-input,.ant-input-affix-wrapper,.ant-select-selector,.ant-input-number,.ant-radio-button-wrapper) { border-radius:1px; border-color:#d6cbb8; }
+.frontend-layout .portal-interior :is(.ant-input,.ant-input-affix-wrapper,.ant-select-selector) { background-color:#fffdf7; }
+.frontend-layout .portal-interior .ant-card { border-color:#d8cebb; border-radius:2px; box-shadow:none; }
+.frontend-layout .portal-interior .ant-tag { border-radius:1px; }
+.frontend-layout .portal-interior .ant-tabs-ink-bar { background:#a4362a; }
+.frontend-layout .portal-interior .ant-tabs-tab-active .ant-tabs-tab-btn { color:#a4362a; }
+.frontend-layout .portal-interior .ant-pagination-item { border-radius:0; background:transparent; }
+.frontend-layout .portal-interior .ant-pagination-item-active { border-color:#a4362a; }.frontend-layout .portal-interior .ant-pagination-item-active a { color:#a4362a; }
+.frontend-layout .portal-interior .ant-empty { padding:48px 20px; color:#8a8477; }
+.frontend-layout .portal-interior :is(button,a,[role='button'],[role='link']):focus-visible { outline:2px solid #a78c63; outline-offset:4px; }
+.frontend-layout .portal-interior .ant-segmented { background:#eae3d5; border-radius:1px; padding:4px; }.frontend-layout .portal-interior .ant-segmented-item-selected { background:#fdfaf2; box-shadow:0 1px 4px #674e2e11; border-radius:0; }
+@media(prefers-reduced-motion:reduce) { .frontend-layout .portal-interior *, .frontend-layout .portal-interior *:before,.frontend-layout .portal-interior *:after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+@media(max-width:680px) { .frontend-layout .portal-interior::after { background-size:420px 291px; background-position:center 70px; opacity:.38; } }
+
+/* Motion follows the same quiet, tactile language as the paper and bronze. */
+.frontend-layout { --portal-ease:cubic-bezier(.22,.68,.2,1); }
+.frontend-layout .portal-route-enter-active { transition:opacity .26s ease; }
+.frontend-layout .portal-route-leave-active { transition:opacity .16s ease; }
+.frontend-layout .portal-route-enter-from,.frontend-layout .portal-route-leave-to { opacity:0; }
+.frontend-layout .portal-click-light { position:fixed; pointer-events:none; overflow:hidden; z-index:1100; contain:strict; }
+.frontend-layout .portal-click-ring { position:absolute; pointer-events:none; border-radius:50%; background:radial-gradient(circle,#dfc28b4d 0%,#e0c48f33 48%,#caa26616 65%,transparent 70%); animation:portal-ink-ripple .65s var(--portal-ease) both; }
+@keyframes portal-ink-ripple { from { opacity:.9; transform:scale(.06); } to { opacity:0; transform:scale(1); } }
+
+.frontend-layout .portal-interior :is(.filter-section,.search-section,.discussion-filters,.course-bar) { transition:border-color .3s,box-shadow .3s,background-color .3s; }
+.frontend-layout .portal-interior :is(.filter-section,.search-section,.discussion-filters,.course-bar):focus-within { border-color:#b59a71; box-shadow:0 5px 22px #806a3810; }
+.frontend-layout .portal-interior :is(.ant-input-affix-wrapper,.ant-select-selector,.ant-input,.ant-input-number) { transition:border-color .25s,box-shadow .25s,background-color .25s; }
+.frontend-layout .portal-interior :is(.ant-input-affix-wrapper-focused,.ant-input:focus,.ant-select-focused .ant-select-selector,.ant-input-number-focused) { border-color:#aa8d61; box-shadow:0 0 0 3px #bda77b13; }
+.frontend-layout .portal-interior .ant-btn:not(:disabled) { transition:color .25s,background-color .25s,border-color .25s,box-shadow .25s; }
+.frontend-layout .portal-interior .ant-btn:not(:disabled):active { box-shadow:inset 0 2px 6px #37230d25; }
+.frontend-layout .portal-interior .ant-radio-button-wrapper-checked,.frontend-layout .portal-interior .ant-tabs-tab-active { text-shadow:0 0 18px #a4793933; }
+.frontend-layout .portal-interior .ant-tabs-ink-bar { box-shadow:0 1px 7px #a4362a2b; transition:width .35s var(--portal-ease),left .35s var(--portal-ease); }
+.frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card,.work-card,.recommend-card) { transition:transform .45s var(--portal-ease),border-color .4s,box-shadow .4s; }
+.frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card,.work-card,.recommend-card):focus-visible { border-color:#ad9064; box-shadow:0 12px 32px #59472b14,inset 0 0 0 1px #c5ab7a66; }
+.frontend-layout .portal-interior :is(.card-cover,.course-cover,.activity-cover,.product-image,.work-cover,.header-cover,.main-image) { overflow:hidden; }
+.frontend-layout .portal-interior :is(.card-footer,.activity-action,.course-action,.product-footer,.discussion-footer) { transition:border-color .35s,color .35s; }
+.frontend-layout .portal-interior :is(.discussion-item,.resource-row,.task-record,.chapter-item,.order-card) { transition:border-color .3s,box-shadow .3s,background-color .3s; }
+.frontend-layout .portal-interior :is(.discussion-item,.resource-row,.task-record,.chapter-item,.order-card):focus-within { border-color:#c3a77a; box-shadow:inset 3px 0 #b59a714d; }
+.frontend-layout .portal-interior :is(.detail-breadcrumb,.header-breadcrumb,.portal-breadcrumb) a { text-decoration-thickness:1px; text-underline-offset:5px; }
+.frontend-layout .portal-interior :is(.detail-breadcrumb,.header-breadcrumb,.portal-breadcrumb) a:hover { text-decoration:underline; }
+.frontend-layout .portal-interior :is(.archive-grid,.summary-strip,.workspace-stats,.quick-info) { background-image:linear-gradient(110deg,#c5ad7d08,transparent 48%,#c5ad7d0a); }
+.frontend-layout .portal-interior :is(.archive-grid,.summary-strip,.workspace-stats) > div { transition:background-color .3s; }
+.frontend-layout .portal-interior .ant-table-tbody > tr > td { transition:background-color .25s; }
+
+@media(hover:hover) and (pointer:fine) {
+  .frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card,.work-card,.recommend-card):hover { border-color:#b59a71; box-shadow:0 16px 32px #59472b15,inset 0 0 0 1px #c5ab7a44; }
+  .frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card):hover :is(.card-footer,.activity-action,.course-action,.product-footer) { border-color:#b59a71; }
+  .frontend-layout .portal-interior :is(.discussion-item,.resource-row,.task-record,.chapter-item,.order-card):hover { border-color:#c3ae8b; box-shadow:inset 3px 0 #b59a713d,0 7px 24px #79643d08; }
+  .frontend-layout .portal-interior :is(.archive-grid,.summary-strip,.workspace-stats) > div:hover { background-color:#d7c7a716; }
+  .frontend-layout .portal-interior .ant-btn-primary:not(:disabled):hover { box-shadow:0 4px 14px #7c33212b; }
+  .frontend-layout :is(.footer-links a,.footer-brand) { transition:color .25s,text-shadow .25s; }
+  .frontend-layout :is(.footer-links a,.footer-brand):hover { text-shadow:0 0 20px #d5c29b35; }
+}
+@media(hover:none), (pointer:coarse) {
+  .frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card,.work-card,.recommend-card):hover { transform:none; }
+  .frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card):hover img { transform:none; }
+  .frontend-layout .portal-interior { background-attachment:scroll; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .frontend-layout .portal-route-enter-active,.frontend-layout .portal-route-leave-active { transition:none; }
+  .frontend-layout .portal-click-light { display:none; }
+  .frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card,.work-card,.recommend-card):is(:hover,:focus-visible),.frontend-layout .portal-interior :is(.heritage-item-card,.inheritor-card,.course-card,.activity-card,.product-card):hover img { transform:none; }
+}

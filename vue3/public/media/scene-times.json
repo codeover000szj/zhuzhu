@@ -1,0 +1,50 @@
+{
+  "video": "/media/heritage-opening.mp4",
+  "duration": 20.062,
+  "poster": "/images/hero-poster.jpg",
+  "posterTime": 4.004,
+  "scenes": [
+    {
+      "id": 1,
+      "time": 2.794,
+      "image": "/images/hero-scene-1.jpg",
+      "label": "云起茶山",
+      "description": "云雾中的梯田茶山，含视频原有“中国传统制茶技艺及其相关习俗”书法标题。"
+    },
+    {
+      "id": 2,
+      "time": 4.004,
+      "image": "/images/hero-scene-2.jpg",
+      "label": "岩间茶园",
+      "description": "山岩与云雾间的绿色梯田茶园，无字幕的空镜。"
+    },
+    {
+      "id": 3,
+      "time": 7.216,
+      "image": "/images/hero-scene-3.jpg",
+      "label": "庭院晾青",
+      "description": "俯拍传统瓦屋庭院，竹匾中的鲜叶铺开晾晒。"
+    },
+    {
+      "id": 4,
+      "time": 10.594,
+      "image": "/images/hero-scene-4.jpg",
+      "label": "手作茶香",
+      "description": "制茶者双手翻动翠绿鲜叶的近景。"
+    },
+    {
+      "id": 5,
+      "time": 14.014,
+      "image": "/images/hero-scene-5.jpg",
+      "label": "竹匾筛茶",
+      "description": "制茶者手持竹匾筛动茶叶的近景。"
+    },
+    {
+      "id": 6,
+      "time": 17.643,
+      "image": "/images/hero-scene-6.jpg",
+      "label": "一盏春色",
+      "description": "透明玻璃杯中的翠绿茶芽特写。"
+    }
+  ]
+}

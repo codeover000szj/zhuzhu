@@ -1,0 +1,122 @@
+/* Quiet, local-only surface treatment for interior pages. The texture comes
+   from the project's own textile photograph; no remote asset is required. */
+.frontend-layout .portal-interior {
+  overflow: clip;
+  background-color: #eee9dd !important;
+  background-image:
+    radial-gradient(circle at 8% 12%, #bb9b5b20 0 1px, transparent 1.5px),
+    radial-gradient(circle at 86% 28%, #31534318 0 1px, transparent 1.5px),
+    linear-gradient(118deg, #fbf8ef 0%, #eee8dc 42%, #f7f1e5 100%),
+    url('/images/portal-textile.jpg') !important;
+  background-size: 31px 31px, 43px 43px, auto, 920px auto !important;
+  background-position: 0 0, 12px 17px, 0 0, right 160px !important;
+  background-repeat: repeat, repeat, no-repeat, no-repeat !important;
+  background-blend-mode: multiply, multiply, normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: .66;
+  background:
+    linear-gradient(105deg, transparent 0 30%, #c49d5d12 30.1% 30.3%, transparent 30.4% 68%, #315b4810 68.1% 68.3%, transparent 68.4%),
+    linear-gradient(175deg, transparent 0 74%, #a4362a09 74.1% 74.35%, transparent 74.45%),
+    repeating-linear-gradient(90deg, transparent 0 89px, #725a3720 90px, transparent 91px);
+  mix-blend-mode: multiply;
+}
+
+.frontend-layout .portal-interior > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Each collection keeps the same paper language while receiving a distinct
+   colour atmosphere, so long interior routes do not read as one flat page. */
+.frontend-layout .portal-interior > :is(.heritage-list-page, .heritage-detail-page) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(145deg, #f8f4e9d9, #e9eee4a8 52%, #f7f1e7dd),
+    url('/images/portal-textile.jpg') !important;
+  background-size: auto, 760px auto !important;
+  background-position: 0 0, right 340px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior > :is(.inheritor-list-page, .inheritor-detail-wrapper) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(120deg, #edf0e5e8, #f7f2e6d6 52%, #e8eee5d8),
+    url('/images/hero-scene-4.jpg') !important;
+  background-size: auto, 980px auto !important;
+  background-position: 0 0, right 260px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior > :is(.activity-list, .activity-detail) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(142deg, #f2eee2e3, #e8eee9d5 58%, #f9f1e4e6),
+    url('/images/hero-scene-3.jpg') !important;
+  background-size: auto, 1050px auto !important;
+  background-position: 0 0, left 420px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior > :is(.course-list, .course-detail) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(118deg, #f6f0e2e8, #e6eee6d8 50%, #f7eee2e3),
+    url('/images/hero-scene-5.jpg') !important;
+  background-size: auto, 1080px auto !important;
+  background-position: 0 0, right 470px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior > :is(.shop-page, .product-detail-wrapper) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(135deg, #f9f2e4eb, #e8ede5d6 52%, #f4e8ddeb),
+    url('/images/portal-textile.jpg') !important;
+  background-size: auto, 840px auto !important;
+  background-position: 0 0, left 520px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+.frontend-layout .portal-interior > :is(.community-page, .ai-chat-page, .user-orders-page, .order-confirm-page, .order-detail-page, .learning-center-page, .teacher-workspace-page) {
+  background-color: transparent !important;
+  background-image:
+    linear-gradient(128deg, #f1eee3e7, #e5eee8d5 55%, #f8eee2e4),
+    url('/images/hero-scene-6.jpg') !important;
+  background-size: auto, 980px auto !important;
+  background-position: 0 0, right 360px !important;
+  background-blend-mode: normal, soft-light !important;
+}
+
+/* Subsections stay readable over the pattern while retaining their own paper
+   panels and existing hierarchy. */
+.frontend-layout .portal-interior :is(.filter-section, .search-section, .discussion-filters, .course-bar, .shop-intro, .forum-guide, .assistant-aside) {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@media (max-width: 680px) {
+  .frontend-layout .portal-interior {
+    background-size: 27px 27px, 39px 39px, auto, 620px auto !important;
+    background-position: 0 0, 10px 14px, 0 0, 80px 210px !important;
+    background-attachment: scroll !important;
+  }
+  .frontend-layout .portal-interior > :is(.heritage-list-page, .heritage-detail-page, .inheritor-list-page, .inheritor-detail-wrapper, .activity-list, .activity-detail, .course-list, .course-detail, .shop-page, .product-detail-wrapper, .community-page, .ai-chat-page) {
+    background-size: auto, 560px auto !important;
+    background-position: 0 0, center 320px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frontend-layout .portal-interior :is(.filter-section, .search-section, .discussion-filters, .course-bar, .shop-intro, .forum-guide, .assistant-aside) {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

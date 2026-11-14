@@ -1,0 +1,40 @@
+# 本机服务日志与进程检查记录（不含项目数据备份）。
+.local-runtime/
+scripts/__pycache__/
+# 本机备份含数据库内容和私密配置，禁止提交。
+archive/runtime-backups/
+
+# GitHub source distribution: keep local history, outputs and private data off Git.
+archive/
+.DS_Store
+node_modules/
+dist/
+target/
+__pycache__/
+*.py[cod]
+
+# Machine-specific secrets and private credentials.
+application-local.yml
+application-local.yaml
+application-secrets.yml
+application-secrets.yaml
+application-private.yml
+application-private.yaml
+.env.local
+.env.*.local
+.env.secrets
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
+
+# Original database export contains business records; share schema.sql only.
+/database/heritage_db.sql
+
+# Acceptance screenshots may include personal identifiers from the local site.
+/docs/acceptance/
+
+# Personal payment code remains available only on this computer.
+/vue3/public/payment/wechat-personal-qr.jpg
