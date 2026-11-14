@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { useUserStore } from '@/store/user'
 import BackendLayout from '@/layouts/BackendLayout.vue'
 import siteConfig from '@/config/site'
@@ -255,7 +255,7 @@ const errorRoutes = [
 
 // 路由配置
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
     if (to.hash) {
